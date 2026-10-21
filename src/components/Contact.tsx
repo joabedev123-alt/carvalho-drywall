@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState, type FormEvent } from "react";
 import { company, generalSms, services, states } from "../data/company";
 import { buildSmsHref, hasPhone } from "../lib/sms";
 import { CopyPhone } from "./CopyPhone";

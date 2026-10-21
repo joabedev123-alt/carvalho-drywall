@@ -59,7 +59,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center text-2xl lg:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center text-2xl lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((value) => !value)}

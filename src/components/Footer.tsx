@@ -4,7 +4,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#000308] pb-[calc(7rem+env(safe-area-inset-bottom))] pt-14 text-foam sm:pt-16 md:pb-16">
+    <footer className="bg-[#000308] pb-[calc(7rem+env(safe-area-inset-bottom))] pt-14 text-foam sm:pt-16 lg:pb-16">
       <div className="shell grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-1">
           <img src="/logo.png" alt="Carvalho Drywall" width={478} height={268} className="h-14 w-auto sm:h-16" />

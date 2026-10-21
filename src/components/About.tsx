@@ -7,10 +7,10 @@ export function About() {
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[18rem] sm:min-h-[22rem] lg:min-h-[40rem]">
           <img
-            src="/img/finishing.jpg"
-            alt="A finisher smoothing compound on an interior wall. Illustrative imagery."
+            src="/img/taping-crew.jpg"
+            alt="Carvalho Drywall crew taping and finishing drywall on a job site."
             width={1200}
-            height={1800}
+            height={1600}
             loading="lazy"
             decoding="async"
             className="absolute inset-0 h-full w-full object-cover"
@@ -24,10 +24,10 @@ export function About() {
             </h2>
             <div className="mt-5 space-y-4 text-base leading-relaxed text-mute sm:mt-6 sm:space-y-5 sm:text-lg">
               <p>
-                Carvalho Drywall Service Corporation works on the surfaces that shape a room: the walls and the ceilings. That includes drywall installation and repair, taping and finishing, plaster, and interior painting for homes and commercial spaces.
+                Carvalho Drywall Service Corporation works on the surfaces that shape a room: the walls and the ceilings. That includes hangs, taping, plasterings, and paintings for homes and commercial spaces.
               </p>
               <p>
-                Each project starts with a clear look at what the space needs. Seams, edges, and repairs are handled with care, and the surrounding area is treated with respect while the work is underway. When you are ready, send a text with the location and a short description. We will review the details and talk through the next steps with you.
+                Each project starts with a clear look at what the space needs. Seams, edges, and finishes are handled with care, and the surrounding area is treated with respect while the work is underway. When you are ready, send a text with the location and a short description. We will review the details and talk through the next steps with you.
               </p>
             </div>
             <SmsLink message={generalSms} className="btn-solid mt-7 w-full sm:mt-8 sm:w-auto">

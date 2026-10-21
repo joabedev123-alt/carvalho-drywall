@@ -11,7 +11,7 @@ export function Services() {
             Professional Services. Exceptional Attention to Detail.
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-mute sm:mt-5 sm:text-lg">
-            The work stays with the surface: hanging board, repairing damage, finishing joints, plastering, and painting the interior.
+            The work stays with the surface: hangs, taping, plasterings, and paintings for homes and commercial spaces.
           </p>
         </div>
 
@@ -29,24 +29,41 @@ export function Services() {
                 }
               >
                 <div className={feature ? "lg:col-span-7" : imageFirst ? "lg:order-first" : "lg:order-last"}>
-                  <figure className="relative overflow-hidden border border-ink/10 shadow-soft">
-                    <img
-                      src={service.image}
-                      alt={`${service.alt} Illustrative imagery.`}
-                      width={service.width}
-                      height={service.height}
-                      loading="lazy"
-                      decoding="async"
-                      className={`w-full object-cover ${feature ? "aspect-[4/5] sm:aspect-[5/4]" : "aspect-[4/5] sm:aspect-[5/4]"}`}
-                    />
-                    <figcaption className="absolute bottom-3 left-3 bg-navy/75 px-2 py-1 text-[0.68rem] uppercase tracking-[0.14em] text-white/80">
-                      Illustrative imagery
-                    </figcaption>
+                  <figure className="relative overflow-hidden border border-ink/10 bg-ink/5 shadow-soft">
+                    {service.video ? (
+                      <video
+                        className="aspect-[4/5] w-full object-cover sm:aspect-[5/4]"
+                        poster={service.image}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        aria-label={service.alt}
+                      >
+                        <source src={service.video} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <img
+                        src={service.image}
+                        alt={service.alt}
+                        width={service.width}
+                        height={service.height}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        decoding="async"
+                        className="aspect-[4/5] w-full object-cover sm:aspect-[5/4]"
+                      />
+                    )}
+                    {!service.realMedia ? (
+                      <figcaption className="absolute bottom-3 left-3 bg-navy/75 px-2 py-1 text-[0.68rem] uppercase tracking-[0.14em] text-white/80">
+                        Illustrative imagery
+                      </figcaption>
+                    ) : null}
                   </figure>
                 </div>
                 <div className={feature ? "flex flex-col justify-center lg:col-span-5" : ""}>
                   <p className="font-serif text-sm tracking-[0.18em] text-brand">
-                    0{index + 1}
+                    {String(index + 1).padStart(2, "0")}
                   </p>
                   <i className={`bi ${service.icon} mt-5 text-2xl text-brand`} aria-hidden="true" />
                   <h3 className="display mt-4 text-[1.75rem] sm:text-3xl md:text-4xl">

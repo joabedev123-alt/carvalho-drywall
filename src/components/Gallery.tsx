@@ -63,49 +63,52 @@ export function Gallery() {
     <section id="work" className="section-space bg-paper">
       <div className="shell">
         <div className="max-w-3xl">
-          <p className="kicker">Gallery</p>
-          <h2 className="display mt-3 text-[2rem] sm:text-4xl md:text-6xl">
-            Explore the Possibilities
-          </h2>
+          <p className="kicker">Our Work</p>
+          <h2 className="display mt-3 text-[2rem] sm:text-4xl md:text-6xl">Our Work</h2>
           <p className="mt-4 text-base leading-relaxed text-mute sm:mt-5 sm:text-lg">
-            A look at drywall, finishing, and interior surfaces. These photographs are illustrative imagery, not projects completed by Carvalho Drywall.
+            Take a closer look at the details from hangs, taping, plasterings, and paintings on our job sites.
           </p>
         </div>
 
-        <ul className="mt-10 grid grid-cols-1 gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:grid-cols-12 lg:gap-5">
+        <ul className="mt-10 grid grid-cols-1 gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-5">
           {gallery.map((item, itemIndex) => {
-            const span =
-              itemIndex === 0
-                ? "lg:col-span-7 lg:row-span-2"
-                : itemIndex < 3
-                  ? "lg:col-span-5"
-                  : "lg:col-span-4";
             return (
-              <li key={item.src + item.caption} className={span}>
+              <li key={item.src + item.caption + itemIndex}>
                 <button
                   type="button"
                   className="group relative block h-full w-full overflow-hidden border border-ink/10 text-left shadow-soft"
                   onClick={(event) => open(itemIndex, event.currentTarget)}
                 >
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    width={item.width}
-                    height={item.height}
-                    loading="lazy"
-                    decoding="async"
-                    className={`w-full object-cover transition duration-500 group-hover:scale-[1.03] ${
-                      itemIndex === 0 ? "aspect-[4/5] sm:aspect-[5/4] lg:aspect-auto lg:h-full lg:min-h-[36rem]" : "aspect-[4/3]"
-                    }`}
-                  />
+                  {item.video ? (
+                    <video
+                      className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                      poster={item.src}
+                      muted
+                      loop
+                      playsInline
+                      autoPlay
+                      preload="metadata"
+                      aria-hidden="true"
+                    >
+                      <source src={item.video} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      width={item.width}
+                      height={item.height}
+                      loading="lazy"
+                      decoding="async"
+                      className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                    />
+                  )}
                   <span className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-gradient-to-t from-navy/80 to-transparent p-3 text-foam sm:p-4">
-                    <span>
-                      <span className="block text-[0.65rem] uppercase tracking-[0.14em] text-white/70 sm:text-[0.68rem] sm:tracking-[0.16em]">
-                        Illustrative imagery
-                      </span>
-                      <span className="mt-1 block font-serif text-lg sm:text-xl">{item.caption}</span>
-                    </span>
-                    <i className="bi bi-arrows-fullscreen text-lg" aria-hidden="true" />
+                    <span className="mt-1 block font-serif text-lg sm:text-xl">{item.caption}</span>
+                    <i
+                      className={`bi ${item.video ? "bi-play-circle" : "bi-arrows-fullscreen"} text-lg`}
+                      aria-hidden="true"
+                    />
                   </span>
                 </button>
               </li>
@@ -140,18 +143,33 @@ export function Gallery() {
                 onClick={close}
               >
                 <i className="bi bi-x-lg" aria-hidden="true" />
-                <span className="sr-only">Close image</span>
+                <span className="sr-only">Close media</span>
               </button>
             </div>
-            <img
-              src={active.src}
-              alt={active.alt}
-              width={active.width}
-              height={active.height}
-              className="max-h-[72vh] w-full object-contain"
-            />
+            {active.video ? (
+              <video
+                className="max-h-[72vh] w-full object-contain"
+                poster={active.src}
+                controls
+                autoPlay
+                playsInline
+                preload="metadata"
+              >
+                <source src={active.video} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src={active.src}
+                alt={active.alt}
+                width={active.width}
+                height={active.height}
+                className="max-h-[72vh] w-full object-contain"
+              />
+            )}
             <div className="mt-3 flex items-center justify-between text-sm text-white/75">
-              <p>Illustrative imagery</p>
+              <p>
+                {index + 1} / {gallery.length}
+              </p>
               <div className="flex gap-2">
                 <button
                   type="button"
@@ -159,7 +177,7 @@ export function Gallery() {
                   onClick={() => step(-1)}
                 >
                   <i className="bi bi-chevron-left" aria-hidden="true" />
-                  <span className="sr-only">Previous image</span>
+                  <span className="sr-only">Previous</span>
                 </button>
                 <button
                   type="button"
@@ -167,7 +185,7 @@ export function Gallery() {
                   onClick={() => step(1)}
                 >
                   <i className="bi bi-chevron-right" aria-hidden="true" />
-                  <span className="sr-only">Next image</span>
+                  <span className="sr-only">Next</span>
                 </button>
               </div>
             </div>

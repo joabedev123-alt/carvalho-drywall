@@ -17,7 +17,7 @@ export const company = {
   region: "NH",
   streetAddress: null as string | null,
   description:
-    "Drywall installation, repair, taping, plastering, and interior painting for homes and commercial spaces across Massachusetts, Vermont, Maine, and New Hampshire.",
+    "Hangs, taping, plasterings, and paintings for homes and commercial spaces across Massachusetts, Vermont, Maine, and New Hampshire.",
 } as const;
 
 export const states = [
@@ -33,72 +33,67 @@ export type Service = {
   smsName: string;
   summary: string;
   image: string;
+  video?: string;
   width: number;
   height: number;
   alt: string;
   icon: string;
+  realMedia: boolean;
 };
 
 export const services: Service[] = [
   {
-    id: "installation",
-    name: "Drywall Installation",
-    smsName: "drywall installation",
+    id: "hangs",
+    name: "Hangs",
+    smsName: "hangs",
     summary:
-      "New drywall for construction, remodels, basements, additions, and commercial rooms. Sheets are measured and set so the finish starts level.",
-    image: "/img/hero.jpg",
+      "Drywall hangs for new construction, remodels, basements, additions, and commercial rooms. Boards are measured and set so the finish starts level.",
+    image: "/img/hangs.jpg",
+    video: "/img/hangs.mp4",
     width: 1800,
     height: 1200,
-    alt: "A worker fastening a drywall sheet to wood framing in an unfinished room.",
+    alt: "A worker hanging drywall boards on an interior framing job.",
     icon: "bi-grid",
-  },
-  {
-    id: "repair",
-    name: "Drywall Repair",
-    smsName: "drywall repair",
-    summary:
-      "Cracks, holes, water-damaged areas, and worn spots repaired so the wall or ceiling can take a smooth finish again.",
-    image: "/img/repair.jpg",
-    width: 1200,
-    height: 1800,
-    alt: "A drywall surface with filled spots prepared for finishing.",
-    icon: "bi-tools",
+    realMedia: true,
   },
   {
     id: "taping",
-    name: "Taping & Finishing",
-    smsName: "taping and finishing",
+    name: "Taping",
+    smsName: "taping",
     summary:
       "Joint tape and finishing coats worked until seams sit level and edges stay clean, ready for paint or texture.",
-    image: "/img/taping.jpg",
+    image: "/img/taping-crew.jpg",
     width: 1200,
-    height: 1800,
-    alt: "A worker applying joint compound over taped drywall in a small room.",
+    height: 1600,
+    alt: "Carvalho Drywall crew taping and finishing drywall seams on site.",
     icon: "bi-layers",
+    realMedia: true,
   },
   {
-    id: "plaster",
-    name: "Plastering",
-    smsName: "plastering",
+    id: "plasterings",
+    name: "Plasterings",
+    smsName: "plasterings",
     summary:
       "Plaster repair and plaster finishing for walls and ceilings, aimed at a sound surface and an even appearance.",
-    image: "/img/plaster-tool.jpg",
-    width: 1202,
-    height: 1800,
-    alt: "A gloved hand smoothing a white wall with a plastering trowel.",
+    image: "/img/plasterings.jpg",
+    width: 1200,
+    height: 1600,
+    alt: "An interior room with freshly plastered walls ready for the next stage.",
     icon: "bi-brush",
+    realMedia: true,
   },
   {
-    id: "painting",
-    name: "Interior Painting",
-    smsName: "interior painting",
+    id: "paintings",
+    name: "Pinturas",
+    smsName: "paintings",
     summary:
       "Interior paint for homes and commercial rooms, applied once the drywall or plaster underneath is prepared.",
-    image: "/img/painting.jpg",
+    image: "/img/paintings.jpg",
     width: 1600,
-    height: 1067,
-    alt: "A painter coating an interior wall during a renovation.",
+    height: 1200,
+    alt: "A finished interior with smooth walls prepared and painted.",
     icon: "bi-paint-bucket",
+    realMedia: true,
   },
 ];
 
@@ -162,7 +157,7 @@ export const faqs = [
   {
     question: "What services do you provide?",
     answer:
-      "We provide drywall installation, drywall repair, taping and finishing, plastering, and interior painting for residential and commercial interiors.",
+      "We provide hangs, taping, plasterings, and paintings for residential and commercial interiors.",
   },
   {
     question: "How do I discuss an estimate?",
@@ -177,50 +172,66 @@ export type GalleryItem = {
   height: number;
   alt: string;
   caption: string;
+  video?: string;
 };
 
 export const gallery: GalleryItem[] = [
   {
-    src: "/img/hero.jpg",
+    src: "/img/hangs.jpg",
+    video: "/img/hangs.mp4",
     width: 1800,
     height: 1200,
-    alt: "A worker fastening drywall to exposed wood studs.",
-    caption: "Hanging drywall",
+    alt: "Drywall hang work on an active interior job.",
+    caption: "Hangs",
   },
   {
-    src: "/img/taping.jpg",
+    src: "/img/taping-crew.jpg",
     width: 1200,
-    height: 1800,
-    alt: "Joint compound being applied over drywall tape.",
-    caption: "Taping a room",
+    height: 1600,
+    alt: "Crew members taping drywall seams.",
+    caption: "Taping",
   },
   {
-    src: "/img/finishing.jpg",
+    src: "/img/taping-main.jpg",
+    width: 1600,
+    height: 1200,
+    alt: "Taped drywall joints across a two-story interior.",
+    caption: "Taping",
+  },
+  {
+    src: "/img/taping-a.jpg",
     width: 1200,
-    height: 1800,
-    alt: "A finisher smoothing compound along an interior wall.",
-    caption: "Smoothing compound",
+    height: 1600,
+    alt: "Close detail of taping and joint compound on site.",
+    caption: "Taping",
   },
   {
-    src: "/img/painting.jpg",
+    src: "/img/taping-b.jpg",
+    width: 1200,
+    height: 1600,
+    alt: "Finished taping progress on interior walls.",
+    caption: "Taping",
+  },
+  {
+    src: "/img/plasterings.jpg",
+    width: 1200,
+    height: 1600,
+    alt: "A room after plasterings, with smooth wall surfaces.",
+    caption: "Plasterings",
+  },
+  {
+    src: "/img/paintings.jpg",
     width: 1600,
-    height: 1067,
-    alt: "Interior paint being rolled onto a prepared wall.",
-    caption: "Interior paint",
+    height: 1200,
+    alt: "Interior surfaces ready for paintings.",
+    caption: "Pinturas",
   },
   {
-    src: "/img/smooth-room.jpg",
+    src: "/img/paintings-01.jpg",
     width: 1600,
-    height: 1068,
-    alt: "A quiet room with a broad, smooth painted wall.",
-    caption: "A smooth wall",
-  },
-  {
-    src: "/img/office.jpg",
-    width: 1400,
-    height: 933,
-    alt: "A finished office interior with painted walls and trim.",
-    caption: "A finished interior",
+    height: 1200,
+    alt: "An upper-level interior with completed wall finish work.",
+    caption: "Pinturas",
   },
 ];
 
