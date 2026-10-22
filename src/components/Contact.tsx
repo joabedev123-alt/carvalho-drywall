@@ -86,20 +86,20 @@ export function Contact() {
         className="absolute inset-0 h-full w-full object-cover opacity-25"
       />
       <div className="absolute inset-0 bg-[#06101b]/80" />
-      <div className="shell relative grid items-start gap-10 sm:gap-14 lg:grid-cols-[1fr_1.05fr]">
+      <div className="shell relative grid items-start gap-8 sm:gap-14 lg:grid-cols-[1fr_1.05fr]">
         <div>
           <p className="kicker-light">Contact</p>
-          <h2 className="display mt-3 text-[2rem] sm:text-4xl md:text-6xl">
+          <h2 className="display mt-3 text-[1.85rem] sm:text-4xl md:text-6xl">
             Let’s Talk About Your Next Project.
           </h2>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-white/78 sm:mt-5 sm:text-lg">
+          <p className="mt-4 max-w-xl text-[0.95rem] leading-relaxed text-white/78 sm:mt-5 sm:text-lg">
             Send us a text with your location and a few details about what you need. We’ll take it from there.
           </p>
 
           {hasPhone() ? (
-            <div className="mt-7 sm:mt-8">
-              <p className="font-serif text-[1.75rem] tracking-tight sm:text-4xl md:text-5xl">{company.phoneDisplay}</p>
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 sm:mt-8">
+              <p className="font-serif text-[1.55rem] tracking-tight sm:text-4xl md:text-5xl">{company.phoneDisplay}</p>
+              <div className="mt-4 flex flex-col gap-2.5 sm:mt-5 sm:flex-row sm:gap-3">
                 <SmsLink message={generalSms} className="btn-inverse w-full sm:w-auto">
                   <i className="bi bi-chat-left-text" aria-hidden="true" />
                   Text Us to Get Started
@@ -148,11 +148,11 @@ export function Contact() {
         </div>
 
         <form
-          className="border border-white/10 bg-foam p-5 text-ink shadow-soft sm:p-6 md:p-8"
+          className="border border-white/10 bg-foam p-4 text-ink shadow-soft sm:p-6 md:p-8"
           onSubmit={onSubmit}
           noValidate
         >
-          <h3 className="font-serif text-[1.65rem] font-medium sm:text-3xl">Prepare your text</h3>
+          <h3 className="font-serif text-[1.45rem] font-medium sm:text-3xl">Prepare your text</h3>
           <p className="mt-2 text-sm leading-relaxed text-mute">
             This form does not send anything by itself. Continue in Messages opens your messaging app with the note filled in. You finish sending it there.
           </p>

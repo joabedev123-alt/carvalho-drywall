@@ -4,10 +4,16 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#000308] pb-[calc(7rem+env(safe-area-inset-bottom))] pt-14 text-foam sm:pt-16 lg:pb-16">
-      <div className="shell grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-[#000308] pb-[calc(6.5rem+env(safe-area-inset-bottom))] pt-12 text-foam sm:pt-16 lg:pb-16">
+      <div className="shell grid gap-8 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-1">
-          <img src="/logo.png" alt="Carvalho Drywall" width={478} height={268} className="h-14 w-auto sm:h-16" />
+          <img
+            src="/logo.png"
+            alt="Carvalho Drywall"
+            width={478}
+            height={268}
+            className="h-12 w-auto max-w-[11rem] object-contain object-left sm:h-16 sm:max-w-none"
+          />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70 sm:mt-5">{company.description}</p>
         </div>
         <div>

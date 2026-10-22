@@ -120,7 +120,10 @@ export function Gallery() {
       {active && index !== null ? (
         <div
           className="fixed inset-0 z-[70] flex items-center justify-center bg-[#05080d]/92 p-3 sm:p-4 md:p-8"
-          style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
+          style={{
+            paddingTop: "max(0.75rem, env(safe-area-inset-top))",
+            paddingBottom: "calc(5.75rem + env(safe-area-inset-bottom))",
+          }}
           onClick={close}
         >
           <div
@@ -132,14 +135,14 @@ export function Gallery() {
             onClick={(event) => event.stopPropagation()}
             onKeyDown={trapTab}
           >
-            <div className="mb-3 flex items-center justify-between gap-3 text-foam sm:gap-4">
-              <p id={titleId} className="font-serif text-lg sm:text-xl">
+            <div className="mb-2.5 flex items-center justify-between gap-3 text-foam sm:mb-3 sm:gap-4">
+              <p id={titleId} className="min-w-0 truncate font-serif text-base sm:text-xl">
                 {active.caption}
               </p>
               <button
                 ref={closeRef}
                 type="button"
-                className="inline-flex h-11 w-11 items-center justify-center border border-white/30"
+                className="inline-flex h-11 w-11 shrink-0 items-center justify-center border border-white/30"
                 onClick={close}
               >
                 <i className="bi bi-x-lg" aria-hidden="true" />
@@ -148,7 +151,7 @@ export function Gallery() {
             </div>
             {active.video ? (
               <video
-                className="max-h-[72vh] w-full object-contain"
+                className="max-h-[min(62vh,32rem)] w-full object-contain sm:max-h-[72vh]"
                 poster={active.src}
                 controls
                 autoPlay
@@ -163,10 +166,10 @@ export function Gallery() {
                 alt={active.alt}
                 width={active.width}
                 height={active.height}
-                className="max-h-[72vh] w-full object-contain"
+                className="max-h-[min(62vh,32rem)] w-full object-contain sm:max-h-[72vh]"
               />
             )}
-            <div className="mt-3 flex items-center justify-between text-sm text-white/75">
+            <div className="mt-2.5 flex items-center justify-between text-sm text-white/75 sm:mt-3">
               <p>
                 {index + 1} / {gallery.length}
               </p>

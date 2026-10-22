@@ -67,11 +67,16 @@
 
   @media (max-width: 1023px) {
     html {
-      scroll-padding-bottom: calc(5.25rem + env(safe-area-inset-bottom));
+      scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
     }
 
     body {
       padding-bottom: 0;
+    }
+
+    /* Keep last interactive content clear of the fixed SMS bar */
+    #contact {
+      padding-bottom: calc(5.75rem + env(safe-area-inset-bottom));
     }
   }
 }
@@ -82,7 +87,7 @@
   }
 
   .btn {
-    @apply inline-flex min-h-12 items-center justify-center gap-2 px-5 text-[0.95rem] font-medium transition-colors duration-200;
+    @apply inline-flex min-h-12 w-full items-center justify-center gap-2 px-5 text-[0.95rem] font-medium transition-colors duration-200 sm:w-auto;
   }
 
   .btn-solid {

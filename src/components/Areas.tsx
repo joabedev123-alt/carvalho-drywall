@@ -24,20 +24,20 @@ export function Areas() {
 
   return (
     <section id="areas" className="section-space bg-[#071525] text-foam">
-      <div className="shell grid items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="shell grid items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <p className="kicker-light">Service areas</p>
-          <h2 className="display mt-3 text-[2rem] sm:text-4xl md:text-6xl">
+          <h2 className="display mt-3 text-[1.85rem] sm:text-4xl md:text-6xl">
             Serving Four New England States.
           </h2>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-white/75 sm:mt-5 sm:text-lg">
+          <p className="mt-4 max-w-xl text-[0.95rem] leading-relaxed text-white/75 sm:mt-5 sm:text-lg">
             Have a project in one of these states? Text us your location and project details to confirm availability in your area.
           </p>
-          <ul className="mt-8 border-t border-white/15 sm:mt-10">
+          <ul className="mt-7 border-t border-white/15 sm:mt-10">
             {states.map((state) => (
               <li
                 key={state.abbr}
-                className={`flex min-h-14 items-center gap-3 border-b border-white/15 py-4 transition-colors sm:gap-4 sm:py-5 ${
+                className={`flex min-h-12 items-center gap-3 border-b border-white/15 py-3.5 transition-colors sm:min-h-14 sm:gap-4 sm:py-5 ${
                   active === state.name ? "text-white" : "text-white/80"
                 }`}
                 onMouseEnter={() => setActive(state.name)}
@@ -45,7 +45,7 @@ export function Areas() {
                 onTouchStart={() => setActive(state.name)}
               >
                 <i className="bi bi-geo-alt text-lg text-[#9ec2ea]" aria-hidden="true" />
-                <span className="font-serif text-2xl sm:text-3xl">{state.name}</span>
+                <span className="font-serif text-xl sm:text-3xl">{state.name}</span>
                 <span className="ml-auto text-xs tracking-[0.18em] text-white/50">{state.abbr}</span>
               </li>
             ))}
@@ -56,7 +56,7 @@ export function Areas() {
           <p className="sr-only">
             Map of Maine, New Hampshire, Vermont, and Massachusetts. No street address is marked.
           </p>
-          <svg viewBox="20 10 520 630" className="mx-auto w-full max-w-[18rem] sm:max-w-md lg:max-w-lg" aria-hidden="true">
+          <svg viewBox="20 10 520 630" className="mx-auto w-full max-w-[15.5rem] sm:max-w-md lg:max-w-lg" aria-hidden="true">
             {states.map((state) => (
               <path
                 key={state.abbr}

@@ -7,12 +7,12 @@ export function Faq() {
 
   return (
     <section className="section-space bg-foam" aria-labelledby="faq-title">
-      <div className="shell grid gap-10 sm:gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+      <div className="shell grid gap-8 sm:gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <div>
           <p className="kicker">Questions</p>
           <h2
             id="faq-title"
-            className="display mt-3 text-[2rem] sm:text-4xl md:text-5xl"
+            className="display mt-3 text-[1.85rem] sm:text-4xl md:text-5xl"
           >
             Before you send a text.
           </h2>
@@ -28,7 +28,7 @@ export function Faq() {
                   <button
                     id={buttonId}
                     type="button"
-                    className="flex w-full items-start justify-between gap-4 py-4 text-left font-serif text-[1.2rem] leading-snug sm:items-center sm:gap-6 sm:py-5 sm:text-2xl"
+                    className="flex w-full items-start justify-between gap-3 py-3.5 text-left font-serif text-[1.1rem] leading-snug sm:items-center sm:gap-6 sm:py-5 sm:text-2xl"
                     aria-expanded={expanded}
                     aria-controls={panelId}
                     onClick={() => setOpen(expanded ? null : index)}

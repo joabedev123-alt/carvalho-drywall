@@ -26,10 +26,10 @@ export function Header() {
       className="sticky top-0 z-50 border-b border-white/10 bg-[#000308] text-foam"
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
-      <div className="mx-auto flex h-[4.25rem] w-full max-w-[88rem] flex-nowrap items-center gap-3 px-4 sm:h-[4.75rem] sm:gap-4 sm:px-6 lg:gap-5 lg:px-8">
+      <div className="mx-auto flex h-[4rem] w-full max-w-[88rem] flex-nowrap items-center gap-2.5 px-3.5 sm:h-[4.75rem] sm:gap-4 sm:px-6 lg:gap-5 lg:px-8">
         <a
           href="#home"
-          className="shrink-0"
+          className="min-w-0 shrink"
           aria-label="Carvalho Drywall, home"
           onClick={() => setOpen(false)}
         >
@@ -38,7 +38,7 @@ export function Header() {
             alt="Carvalho Drywall"
             width={478}
             height={268}
-            className="h-10 w-auto sm:h-11 lg:h-12"
+            className="h-9 w-auto max-w-[10.5rem] object-contain object-left sm:h-11 sm:max-w-none lg:h-12"
           />
         </a>
 
@@ -87,22 +87,22 @@ export function Header() {
       <div
         id="mobile-menu"
         hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-[calc(4.25rem+env(safe-area-inset-top))] z-50 overflow-y-auto border-t border-white/10 bg-[#000308] lg:hidden"
-        style={{ paddingBottom: "calc(5.75rem + env(safe-area-inset-bottom))" }}
+        className="fixed inset-x-0 bottom-0 top-[calc(4rem+env(safe-area-inset-top))] z-50 overflow-y-auto overscroll-contain border-t border-white/10 bg-[#000308] sm:top-[calc(4.75rem+env(safe-area-inset-top))] lg:hidden"
+        style={{ paddingBottom: "calc(6rem + env(safe-area-inset-bottom))" }}
       >
-        <nav className="shell flex flex-col py-2" aria-label="Mobile">
+        <nav className="shell flex flex-col py-1" aria-label="Mobile">
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="min-h-14 border-b border-white/10 py-4 text-lg"
+              className="flex min-h-12 items-center border-b border-white/10 py-3.5 text-[1.05rem] sm:min-h-14 sm:py-4 sm:text-lg"
               onClick={() => setOpen(false)}
             >
               {item.label}
             </a>
           ))}
-          <p className="mt-5 text-sm text-white/70">{company.phoneDisplay}</p>
-          <div className="mt-4 flex flex-col gap-3 pb-6">
+          <p className="mt-4 text-sm text-white/70 sm:mt-5">{company.phoneDisplay}</p>
+          <div className="mt-3 flex flex-col gap-2.5 pb-6 sm:mt-4 sm:gap-3">
             <CopyPhone className="btn-ghost-light w-full" />
             <SmsLink message={generalSms} className="btn-inverse w-full">
               <i className="bi bi-chat-left-text" aria-hidden="true" />

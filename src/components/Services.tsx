@@ -15,7 +15,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-10 flex flex-col gap-12 sm:mt-16 sm:gap-20 md:mt-24 md:gap-28">
+        <div className="mt-8 flex flex-col gap-10 sm:mt-16 sm:gap-20 md:mt-24 md:gap-28">
           {services.map((service, index) => {
             const imageFirst = index % 2 === 1;
             const feature = index === 2;
@@ -24,8 +24,8 @@ export function Services() {
                 key={service.id}
                 className={
                   feature
-                    ? "grid items-stretch gap-6 sm:gap-8 lg:grid-cols-12"
-                    : "grid items-center gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-16"
+                    ? "grid items-stretch gap-5 sm:gap-8 lg:grid-cols-12"
+                    : "grid items-center gap-5 sm:gap-8 lg:grid-cols-2 lg:gap-16"
                 }
               >
                 <div className={feature ? "lg:col-span-7" : imageFirst ? "lg:order-first" : "lg:order-last"}>
