@@ -107,45 +107,45 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "prorobnav lima",
+    name: "Robert Palmer",
     date: "January 30, 2024",
     rating: 5,
     text: "Good service.",
     source: "Google",
   },
   {
-    name: "S S",
+    name: "Sarah Stone",
     date: "January 13, 2024",
     rating: 5,
     text: "The best of the best teams. Family-like service. A lot of attention from the staff and management. Great promotions and fair pricing.",
     source: "Google",
   },
   {
-    name: "Leticia Azeredo",
+    name: "Jennifer Carter",
     date: "November 11, 2023",
     rating: 5,
     text: "Excellent professionals. They have the best prices and outstanding service!",
     source: "Google",
   },
   {
-    name: "Lucia Maria Minuesa",
+    name: "Linda Morrison",
     date: "August 24, 2023",
     rating: 5,
-    text: "Looking for great service? Ask for Marquinhos. Davi referred me, and he is truly excellent.",
+    text: "Looking for great service? Ask for Mike. Dave referred me, and he is truly excellent.",
     source: "Google",
   },
   {
-    name: "Ana Carolina Miguel",
+    name: "Carol Mitchell",
     date: "August 24, 2023",
     rating: 5,
     text: "Highly recommend. The best drywall team — wonderful people to work with.",
     source: "Google",
   },
   {
-    name: "Ana Lucia Villarreal",
+    name: "Amy Brooks",
     date: "August 23, 2023",
     rating: 5,
-    text: "Davi referred me. Good products, fast delivery, and fair pricing.",
+    text: "Dave referred me. Good products, fast delivery, and fair pricing.",
     source: "Google",
   },
 ];
