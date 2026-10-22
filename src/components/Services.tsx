@@ -10,12 +10,12 @@ export function Services() {
           <h2 className="display mt-3 text-[2rem] sm:text-4xl md:text-6xl">
             Professional Services. Exceptional Attention to Detail.
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-mute sm:mt-5 sm:text-lg">
-            The work stays with the surface: hangs, taping, plasterings, and paintings for homes and commercial spaces.
+          <p className="mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-mute sm:mt-5 sm:text-lg">
+            From the first board to the final coat of paint, each service is handled with care for homes and commercial spaces.
           </p>
         </div>
 
-        <div className="mt-12 flex flex-col gap-14 sm:mt-16 sm:gap-20 md:mt-24 md:gap-28">
+        <div className="mt-10 flex flex-col gap-12 sm:mt-16 sm:gap-20 md:mt-24 md:gap-28">
           {services.map((service, index) => {
             const imageFirst = index % 2 === 1;
             const feature = index === 2;
@@ -24,8 +24,8 @@ export function Services() {
                 key={service.id}
                 className={
                   feature
-                    ? "grid items-stretch gap-8 lg:grid-cols-12"
-                    : "grid items-center gap-8 lg:grid-cols-2 lg:gap-16"
+                    ? "grid items-stretch gap-6 sm:gap-8 lg:grid-cols-12"
+                    : "grid items-center gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-16"
                 }
               >
                 <div className={feature ? "lg:col-span-7" : imageFirst ? "lg:order-first" : "lg:order-last"}>
@@ -69,7 +69,7 @@ export function Services() {
                   <h3 className="display mt-4 text-[1.75rem] sm:text-3xl md:text-4xl">
                     {service.name}
                   </h3>
-                  <p className="mt-3 text-base leading-relaxed text-mute sm:mt-4 sm:text-lg">{service.summary}</p>
+                  <p className="mt-3 text-[0.95rem] leading-relaxed text-mute sm:mt-4 sm:text-lg">{service.summary}</p>
                   <SmsLink
                     message={serviceSms(service.smsName)}
                     className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink underline decoration-ink/30 underline-offset-4 hover:decoration-brand hover:text-brand sm:mt-7"

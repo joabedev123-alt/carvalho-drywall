@@ -98,7 +98,7 @@ export function Contact() {
 
           {hasPhone() ? (
             <div className="mt-7 sm:mt-8">
-              <p className="break-all font-serif text-[2rem] tracking-tight sm:text-4xl md:text-5xl">{company.phoneDisplay}</p>
+              <p className="font-serif text-[1.75rem] tracking-tight sm:text-4xl md:text-5xl">{company.phoneDisplay}</p>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                 <SmsLink message={generalSms} className="btn-inverse w-full sm:w-auto">
                   <i className="bi bi-chat-left-text" aria-hidden="true" />

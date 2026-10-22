@@ -10,6 +10,7 @@ import { MobileBar } from "./components/MobileBar";
 import { Pillars } from "./components/Pillars";
 import { Process } from "./components/Process";
 import { Services } from "./components/Services";
+import { Testimonials } from "./components/Testimonials";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <About />
         <Pillars />
         <Gallery />
+        <Testimonials />
         <Process />
         <Areas />
         <Faq />

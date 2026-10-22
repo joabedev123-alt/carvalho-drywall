@@ -20,14 +20,14 @@ export function About() {
           <div className="max-w-xl">
             <p className="kicker">About</p>
             <h2 className="display mt-3 text-[2rem] sm:text-4xl md:text-5xl">
-              A Thoughtful Approach to Every Project.
+              Perfection Is in the Details.
             </h2>
             <div className="mt-5 space-y-4 text-base leading-relaxed text-mute sm:mt-6 sm:space-y-5 sm:text-lg">
               <p>
-                Carvalho Drywall Service Corporation works on the surfaces that shape a room: the walls and the ceilings. That includes hangs, taping, plasterings, and paintings for homes and commercial spaces.
+                At Carvalho Drywall, perfection is in the details. From millimeter-precise alignment to a flawless finish, we deliver sophistication, speed, and top-tier quality for your project.
               </p>
               <p>
-                Each project starts with a clear look at what the space needs. Seams, edges, and finishes are handled with care, and the surrounding area is treated with respect while the work is underway. When you are ready, send a text with the location and a short description. We will review the details and talk through the next steps with you.
+                When you are ready, send a text with your location and a short description of the work. We will review the details and talk through the next steps with you.
               </p>
             </div>
             <SmsLink message={generalSms} className="btn-solid mt-7 w-full sm:mt-8 sm:w-auto">

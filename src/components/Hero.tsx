@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden bg-navy text-foam min-h-[min(100svh,52rem)] md:min-h-[calc(100svh-5.25rem)]"
+      className="relative isolate min-h-[min(100svh,48rem)] overflow-hidden bg-navy text-foam md:min-h-[calc(100svh-4.75rem)]"
     >
       <video
         className="absolute inset-0 h-full w-full object-cover object-[68%_center] sm:object-[60%_center] md:object-center"
@@ -21,19 +21,19 @@ export function Hero() {
       </video>
       <div className="absolute inset-0 bg-gradient-to-t from-[#05080d] via-[#05080d]/88 to-[#05080d]/40 md:bg-gradient-to-r md:from-[#05080d] md:via-[#05080d]/75 md:to-[#05080d]/20" />
 
-      <div className="shell relative flex min-h-[min(100svh,52rem)] items-end pb-[7.5rem] pt-8 sm:pb-32 sm:pt-12 md:min-h-[calc(100svh-5.25rem)] md:items-center md:py-24 md:pb-24">
+      <div className="shell relative flex min-h-[min(100svh,48rem)] items-end pb-[7.25rem] pt-7 sm:pb-28 sm:pt-12 md:min-h-[calc(100svh-4.75rem)] md:items-center md:py-24 md:pb-24">
         <div className="w-full max-w-2xl">
           <p className="kicker-light">Drywall &amp; Interior Finishing</p>
-          <h1 className="display mt-3 text-[1.95rem] leading-[1.1] sm:mt-4 sm:text-[2.75rem] md:text-6xl lg:text-[4.4rem]">
+          <h1 className="display mt-3 text-[1.85rem] leading-[1.12] sm:mt-4 sm:text-[2.75rem] md:text-6xl lg:text-[4.4rem]">
             Drywall hangs and finishes for a clean, paint-ready interior.
           </h1>
           <p className="mt-3 max-w-xl text-[0.95rem] leading-relaxed text-white/80 sm:mt-6 sm:text-lg">
             We handle hangs, taping, plasterings, and paintings for homes and commercial spaces.
           </p>
-          <p className="mt-3 font-serif text-base italic leading-snug text-white/90 sm:mt-5 sm:text-xl">
+          <p className="mt-3 font-serif text-[0.98rem] italic leading-snug text-white/90 sm:mt-5 sm:text-xl">
             Serving Massachusetts, Vermont, Maine &amp; New Hampshire.
           </p>
-          <div className="mt-6 flex w-full flex-col gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
+          <div className="mt-5 flex w-full flex-col gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
             <SmsLink message={generalSms} className="btn-inverse w-full sm:w-auto">
               <i className="bi bi-chat-left-text" aria-hidden="true" />
               Text Us About Your Project

@@ -47,7 +47,7 @@ export const services: Service[] = [
     name: "Hangs",
     smsName: "hangs",
     summary:
-      "Drywall hangs for new construction, remodels, basements, additions, and commercial rooms. Boards are measured and set so the finish starts level.",
+      "Hanging drywall is the foundation of every finished room. Precise board placement, level lines, and clean cuts set the stage for taping, plaster, and paint. At Carvalho Drywall, we hang each sheet with care so walls and ceilings sit true, seams line up, and the finish that follows looks sharp and professional.",
     image: "/img/hangs.jpg",
     video: "/img/hangs.mp4",
     width: 1800,
@@ -61,7 +61,7 @@ export const services: Service[] = [
     name: "Taping",
     smsName: "taping",
     summary:
-      "Joint tape and finishing coats worked until seams sit level and edges stay clean, ready for paint or texture.",
+      "Taping is where drywall becomes a clean, continuous surface. Joints, corners, and screw heads are finished with tape and compound until seams disappear and edges stay sharp. At Carvalho Drywall, we work each coat with patience so the wall is level, smooth, and ready for plaster or paint.",
     image: "/img/taping-crew.jpg",
     width: 1200,
     height: 1600,
@@ -74,7 +74,7 @@ export const services: Service[] = [
     name: "Plasterings",
     smsName: "plasterings",
     summary:
-      "Plaster repair and plaster finishing for walls and ceilings, aimed at a sound surface and an even appearance.",
+      "Plastering restores strength and beauty to walls and ceilings. Whether repairing worn surfaces or refining a full finish, careful plaster work improves durability and creates a surface that feels solid and even. At Carvalho Drywall, we shape each area with precision so the final look is smooth, consistent, and ready for paint.",
     image: "/img/plasterings.jpg",
     width: 1200,
     height: 1600,
@@ -87,7 +87,7 @@ export const services: Service[] = [
     name: "Pinturas",
     smsName: "paintings",
     summary:
-      "Interior paint for homes and commercial rooms, applied once the drywall or plaster underneath is prepared.",
+      "Painting the interior of a home or office goes far beyond changing wall color. Professional painting elevates the property, improves how rooms catch light, and brings comfort, openness, and a cleaner feel to everyday life. At Carvalho Drywall, we treat every wall with the technical care it needs to deliver a uniform, smooth finish free of imperfections.",
     image: "/img/paintings.jpg",
     width: 1600,
     height: 1200,
@@ -97,26 +97,79 @@ export const services: Service[] = [
   },
 ];
 
+export type Testimonial = {
+  name: string;
+  date: string;
+  rating: number;
+  text: string;
+  source: "Google";
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "prorobnav lima",
+    date: "January 30, 2024",
+    rating: 5,
+    text: "Good service.",
+    source: "Google",
+  },
+  {
+    name: "S S",
+    date: "January 13, 2024",
+    rating: 5,
+    text: "The best of the best teams. Family-like service. A lot of attention from the staff and management. Great promotions and fair pricing.",
+    source: "Google",
+  },
+  {
+    name: "Leticia Azeredo",
+    date: "November 11, 2023",
+    rating: 5,
+    text: "Excellent professionals. They have the best prices and outstanding service!",
+    source: "Google",
+  },
+  {
+    name: "Lucia Maria Minuesa",
+    date: "August 24, 2023",
+    rating: 5,
+    text: "Looking for great service? Ask for Marquinhos. Davi referred me, and he is truly excellent.",
+    source: "Google",
+  },
+  {
+    name: "Ana Carolina Miguel",
+    date: "August 24, 2023",
+    rating: 5,
+    text: "Highly recommend. The best drywall team — wonderful people to work with.",
+    source: "Google",
+  },
+  {
+    name: "Ana Lucia Villarreal",
+    date: "August 23, 2023",
+    rating: 5,
+    text: "Davi referred me. Good products, fast delivery, and fair pricing.",
+    source: "Google",
+  },
+];
+
 export const pillars = [
   {
     title: "Attention to Detail",
     icon: "bi-eye",
-    text: "Seams, corners, and repairs are treated as part of the finished surface, not something to rush past.",
+    text: "From straight lines to clean corners, every detail is handled with care so the finished surface looks sharp and consistent.",
+  },
+  {
+    title: "Licensed & Insured",
+    icon: "bi-shield-check",
+    text: "Fully credentialed for your peace of mind on every project we take on.",
+  },
+  {
+    title: "Quality Guaranteed",
+    icon: "bi-award",
+    text: "We stand behind all the projects we complete.",
   },
   {
     title: "Clear Communication",
     icon: "bi-chat-left-text",
-    text: "You can reach us by text. We talk through the scope before the next steps are set.",
-  },
-  {
-    title: "Project-Focused Solutions",
-    icon: "bi-signpost-split",
-    text: "The approach follows the room, the condition of the surface, and the work you actually need.",
-  },
-  {
-    title: "Respect for Your Space",
-    icon: "bi-house",
-    text: "The work is planned around the area it occupies, with care for the home or business around it.",
+    text: "You can reach us by text. We review the scope together before the next steps are set.",
   },
 ] as const;
 

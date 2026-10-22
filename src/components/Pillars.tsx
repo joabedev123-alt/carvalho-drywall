@@ -9,7 +9,7 @@ export function Pillars() {
           id="pillars-title"
           className="display mt-3 max-w-2xl text-[2rem] sm:text-4xl md:text-5xl"
         >
-          Care in the work. Clarity in the conversation.
+          Built on detail, trust, and quality.
         </h2>
         <div className="mt-10 grid gap-0 sm:mt-14 md:grid-cols-2 xl:grid-cols-4">
           {pillars.map((pillar, index) => (

@@ -26,32 +26,47 @@ export function Header() {
       className="sticky top-0 z-50 border-b border-white/10 bg-[#000308] text-foam"
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
-      <div className="shell flex h-[4.5rem] items-center justify-between gap-3 sm:h-[5.25rem] sm:gap-4">
-        <a href="#home" className="shrink-0" aria-label="Carvalho Drywall, home" onClick={() => setOpen(false)}>
+      <div className="mx-auto flex h-[4.25rem] w-full max-w-[88rem] flex-nowrap items-center gap-3 px-4 sm:h-[4.75rem] sm:gap-4 sm:px-6 lg:gap-5 lg:px-8">
+        <a
+          href="#home"
+          className="shrink-0"
+          aria-label="Carvalho Drywall, home"
+          onClick={() => setOpen(false)}
+        >
           <img
             src="/logo.png"
             alt="Carvalho Drywall"
             width={478}
             height={268}
-            className="h-11 w-auto sm:h-14 md:h-[4.25rem]"
+            className="h-10 w-auto sm:h-11 lg:h-12"
           />
         </a>
 
-        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label="Primary">
+        <nav
+          className="hidden min-w-0 flex-1 flex-nowrap items-center justify-center gap-3 xl:gap-5 2xl:gap-6 lg:flex"
+          aria-label="Primary"
+        >
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="whitespace-nowrap text-sm text-white/80 transition-colors hover:text-white"
+              className="shrink-0 whitespace-nowrap text-[0.8125rem] text-white/80 transition-colors hover:text-white xl:text-sm"
             >
               {item.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <CopyPhone className="btn border border-white/20 text-sm text-foam hover:border-white/50" />
-          <SmsLink message={generalSms} className="btn-inverse">
+        <div className="ml-auto hidden shrink-0 flex-nowrap items-center gap-2 lg:flex xl:gap-3">
+          <CopyPhone
+            label="Copy Number"
+            copiedLabel="Copied"
+            className="inline-flex h-10 items-center justify-center gap-1.5 whitespace-nowrap border border-white/20 px-3 text-[0.8125rem] text-foam transition-colors hover:border-white/50 xl:px-3.5"
+          />
+          <SmsLink
+            message={generalSms}
+            className="inline-flex h-10 items-center justify-center gap-1.5 whitespace-nowrap bg-foam px-3.5 text-[0.8125rem] font-medium text-navy transition-colors hover:bg-white xl:px-4"
+          >
             <i className="bi bi-chat-left-text" aria-hidden="true" />
             Text Us
           </SmsLink>
@@ -59,7 +74,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 shrink-0 items-center justify-center text-2xl lg:hidden"
+          className="ml-auto inline-flex h-11 w-11 shrink-0 items-center justify-center text-2xl lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((value) => !value)}
@@ -72,7 +87,7 @@ export function Header() {
       <div
         id="mobile-menu"
         hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-[calc(4.5rem+env(safe-area-inset-top))] z-50 overflow-y-auto border-t border-white/10 bg-[#000308] lg:hidden"
+        className="fixed inset-x-0 bottom-0 top-[calc(4.25rem+env(safe-area-inset-top))] z-50 overflow-y-auto border-t border-white/10 bg-[#000308] lg:hidden"
         style={{ paddingBottom: "calc(5.75rem + env(safe-area-inset-bottom))" }}
       >
         <nav className="shell flex flex-col py-2" aria-label="Mobile">
