@@ -7,10 +7,10 @@ export function Services() {
       <div className="shell">
         <div className="max-w-3xl">
           <p className="kicker">Services</p>
-          <h2 className="display mt-3 text-[2rem] sm:text-4xl md:text-6xl">
+          <h2 className="display mt-3 text-[1.75rem] sm:text-4xl md:text-6xl">
             Professional Services. Exceptional Attention to Detail.
           </h2>
-          <p className="mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-mute sm:mt-5 sm:text-lg">
+          <p className="mt-3.5 max-w-2xl text-[0.92rem] leading-relaxed text-mute sm:mt-5 sm:text-lg">
             From the first board to the final coat of paint, each service is handled with care for homes and commercial spaces.
           </p>
         </div>
@@ -66,13 +66,13 @@ export function Services() {
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <i className={`bi ${service.icon} mt-5 text-2xl text-brand`} aria-hidden="true" />
-                  <h3 className="display mt-4 text-[1.75rem] sm:text-3xl md:text-4xl">
+                  <h3 className="display mt-3 text-[1.55rem] sm:mt-4 sm:text-3xl md:text-4xl">
                     {service.name}
                   </h3>
-                  <p className="mt-3 text-[0.95rem] leading-relaxed text-mute sm:mt-4 sm:text-lg">{service.summary}</p>
+                  <p className="mt-2.5 text-[0.92rem] leading-relaxed text-mute sm:mt-4 sm:text-lg">{service.summary}</p>
                   <SmsLink
                     message={serviceSms(service.smsName)}
-                    className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink underline decoration-ink/30 underline-offset-4 hover:decoration-brand hover:text-brand sm:mt-7"
+                    className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink underline decoration-ink/30 underline-offset-4 hover:decoration-brand hover:text-brand sm:mt-7"
                   >
                     Ask About This Service
                     <i className="bi bi-arrow-right" aria-hidden="true" />

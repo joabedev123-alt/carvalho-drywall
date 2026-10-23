@@ -21,19 +21,19 @@ export function Hero() {
       </video>
       <div className="absolute inset-0 bg-gradient-to-t from-[#05080d] via-[#05080d]/88 to-[#05080d]/40 md:bg-gradient-to-r md:from-[#05080d] md:via-[#05080d]/75 md:to-[#05080d]/20" />
 
-      <div className="shell relative flex min-h-[min(100svh,48rem)] items-end pb-[calc(7.5rem+env(safe-area-inset-bottom))] pt-6 sm:pb-28 sm:pt-12 md:min-h-[calc(100svh-4.75rem)] md:items-center md:py-24 md:pb-24">
+      <div className="shell relative flex min-h-[min(100svh,48rem)] items-end pb-[calc(7.75rem+env(safe-area-inset-bottom))] pt-5 sm:pb-28 sm:pt-12 md:min-h-[calc(100svh-4.75rem)] md:items-center md:py-24 md:pb-24">
         <div className="w-full max-w-2xl">
           <p className="kicker-light">Drywall &amp; Interior Finishing</p>
-          <h1 className="display mt-2.5 text-[1.75rem] leading-[1.12] sm:mt-4 sm:text-[2.75rem] md:text-6xl lg:text-[4.4rem]">
+          <h1 className="display mt-2 text-[1.65rem] leading-[1.14] sm:mt-4 sm:text-[2.75rem] md:text-6xl lg:text-[4.4rem]">
             Drywall hangs and finishes for a clean, paint-ready interior.
           </h1>
-          <p className="mt-3 max-w-xl text-[0.92rem] leading-relaxed text-white/80 sm:mt-6 sm:text-lg">
+          <p className="mt-2.5 max-w-xl text-[0.9rem] leading-relaxed text-white/80 sm:mt-6 sm:text-lg">
             We handle hangs, taping, plasterings, and paintings for homes and commercial spaces.
           </p>
-          <p className="mt-3 font-serif text-[0.95rem] italic leading-snug text-white/90 sm:mt-5 sm:text-xl">
+          <p className="mt-2.5 font-serif text-[0.92rem] italic leading-snug text-white/90 sm:mt-5 sm:text-xl">
             Serving Massachusetts, Vermont, Maine &amp; New Hampshire.
           </p>
-          <div className="mt-5 flex w-full flex-col gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
+          <div className="mt-4 flex w-full flex-col gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
             <SmsLink message={generalSms} className="btn-inverse w-full sm:w-auto">
               <i className="bi bi-chat-left-text" aria-hidden="true" />
               Text Us About Your Project
@@ -43,7 +43,7 @@ export function Hero() {
               <i className="bi bi-arrow-down" aria-hidden="true" />
             </a>
           </div>
-          <p className="mt-3.5 text-[0.8125rem] leading-relaxed text-white/70 sm:mt-6 sm:text-sm">
+          <p className="mt-3 text-[0.8rem] leading-relaxed text-white/70 sm:mt-6 sm:text-sm">
             Prefer texting? Send us a message to get started.
           </p>
         </div>

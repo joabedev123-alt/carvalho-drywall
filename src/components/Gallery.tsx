@@ -64,13 +64,13 @@ export function Gallery() {
       <div className="shell">
         <div className="max-w-3xl">
           <p className="kicker">Our Work</p>
-          <h2 className="display mt-3 text-[2rem] sm:text-4xl md:text-6xl">Our Work</h2>
-          <p className="mt-4 text-base leading-relaxed text-mute sm:mt-5 sm:text-lg">
+          <h2 className="display mt-3 text-[1.75rem] sm:text-4xl md:text-6xl">Our Work</h2>
+          <p className="mt-3.5 text-[0.92rem] leading-relaxed text-mute sm:mt-5 sm:text-lg">
             Take a closer look at the details from hangs, taping, plasterings, and paintings on our job sites.
           </p>
         </div>
 
-        <ul className="mt-10 grid grid-cols-1 gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-5">
+        <ul className="mt-8 grid grid-cols-1 gap-2.5 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-5">
           {gallery.map((item, itemIndex) => {
             return (
               <li key={item.src + item.caption + itemIndex}>

@@ -58,12 +58,12 @@ export function Testimonials() {
 
           <h2
             id="testimonials-title"
-            className="display mt-3 text-[2rem] text-navy sm:text-4xl md:text-[3.25rem]"
+            className="display mt-3 text-[1.85rem] text-navy sm:text-4xl md:text-[3.25rem]"
           >
             What Our Clients Say
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-mute sm:mt-5 sm:text-lg">
+          <p className="mx-auto mt-3.5 max-w-2xl text-[0.92rem] leading-relaxed text-mute sm:mt-5 sm:text-lg">
             Quality and trust approved by the people who matter most. Our clients are proof of our commitment to excellence and efficiency. See what they have to say.
           </p>
 
@@ -111,19 +111,21 @@ export function Testimonials() {
           {testimonials.map((item) => (
             <li
               key={`${item.name}-${item.date}`}
-              className="flex h-full flex-col border border-ink/10 bg-white p-4 shadow-soft sm:p-6"
+              className="flex h-full min-w-0 flex-col border border-ink/10 bg-white p-3.5 shadow-soft sm:p-6"
             >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex min-w-0 items-center gap-3">
+              <div className="flex items-start justify-between gap-2.5 sm:gap-3">
+                <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
                   <span
-                    className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/10 text-xs font-medium text-brand sm:h-11 sm:w-11 sm:text-sm"
+                    className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-[0.7rem] font-medium text-brand sm:h-11 sm:w-11 sm:text-sm"
                     aria-hidden="true"
                   >
                     {initials(item.name)}
                   </span>
                   <div className="min-w-0">
-                    <p className="truncate font-medium leading-tight text-navy">{item.name}</p>
-                    <p className="mt-1 text-xs text-mute">{item.date}</p>
+                    <p className="truncate text-[0.95rem] font-medium leading-tight text-navy sm:text-base">
+                      {item.name}
+                    </p>
+                    <p className="mt-0.5 text-[0.7rem] text-mute sm:mt-1 sm:text-xs">{item.date}</p>
                   </div>
                 </div>
                 <span className="inline-flex shrink-0 items-center gap-1.5 text-xs text-mute">
@@ -132,11 +134,11 @@ export function Testimonials() {
                 </span>
               </div>
 
-              <div className="mt-3 sm:mt-4">
+              <div className="mt-2.5 sm:mt-4">
                 <Stars rating={item.rating} />
               </div>
 
-              <p className="mt-3 flex-1 text-[0.95rem] leading-relaxed text-mute sm:mt-4 sm:text-base">
+              <p className="mt-2.5 flex-1 break-words text-[0.9rem] leading-relaxed text-mute sm:mt-4 sm:text-base">
                 “{item.text}”
               </p>
             </li>
