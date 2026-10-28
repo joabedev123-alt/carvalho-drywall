@@ -4,24 +4,26 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#000308] pb-[calc(6.5rem+env(safe-area-inset-bottom))] pt-12 text-foam sm:pt-16 lg:pb-16">
-      <div className="shell grid gap-8 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-[#000308] pb-[calc(6.75rem+env(safe-area-inset-bottom))] pt-10 text-foam sm:pt-16 lg:pb-16">
+      <div className="shell grid gap-7 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-1">
           <img
             src="/logo.png"
             alt="Carvalho Drywall"
             width={478}
             height={268}
-            className="h-12 w-auto max-w-[11rem] object-contain object-left sm:h-16 sm:max-w-none"
+            className="h-11 w-auto max-w-[10rem] object-contain object-left sm:h-16 sm:max-w-none"
           />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70 sm:mt-5">{company.description}</p>
+          <p className="mt-3.5 max-w-xs text-[0.8125rem] leading-relaxed text-white/70 sm:mt-5 sm:text-sm">
+            {company.description}
+          </p>
         </div>
         <div>
           <h2 className="text-xs uppercase tracking-[0.18em] text-white/50">Navigate</h2>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-3.5 space-y-1.5 sm:mt-4 sm:space-y-2">
             {nav.map((item) => (
               <li key={item.href}>
-                <a className="text-sm text-white/80 hover:text-white" href={item.href}>
+                <a className="inline-flex min-h-10 items-center text-sm text-white/80 hover:text-white" href={item.href}>
                   {item.label}
                 </a>
               </li>

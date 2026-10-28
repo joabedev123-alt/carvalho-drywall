@@ -46,7 +46,7 @@ export function Faq() {
                   aria-labelledby={buttonId}
                   hidden={!expanded}
                 >
-                  <p className="max-w-2xl pb-5 text-[0.95rem] leading-relaxed text-mute sm:pb-6 sm:text-base">{item.answer}</p>
+                  <p className="max-w-2xl pb-4 text-[0.9rem] leading-relaxed text-mute sm:pb-6 sm:text-base">{item.answer}</p>
                 </div>
               </div>
             );

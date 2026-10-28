@@ -26,7 +26,7 @@ export function Header() {
       className="sticky top-0 z-50 border-b border-white/10 bg-[#000308] text-foam"
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
-      <div className="mx-auto flex h-[4rem] w-full max-w-[88rem] flex-nowrap items-center gap-2.5 px-3.5 sm:h-[4.75rem] sm:gap-4 sm:px-6 lg:gap-5 lg:px-8">
+      <div className="mx-auto flex h-[3.75rem] w-full max-w-[88rem] flex-nowrap items-center gap-2 px-3 sm:h-[4.75rem] sm:gap-4 sm:px-6 lg:gap-5 lg:px-8">
         <a
           href="#home"
           className="min-w-0 shrink"
@@ -38,7 +38,7 @@ export function Header() {
             alt="Carvalho Drywall"
             width={478}
             height={268}
-            className="h-9 w-auto max-w-[10.5rem] object-contain object-left sm:h-11 sm:max-w-none lg:h-12"
+            className="h-8 w-auto max-w-[9.5rem] object-contain object-left sm:h-11 sm:max-w-none lg:h-12"
           />
         </a>
 
@@ -87,7 +87,7 @@ export function Header() {
       <div
         id="mobile-menu"
         hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-[calc(4rem+env(safe-area-inset-top))] z-50 overflow-y-auto overscroll-contain border-t border-white/10 bg-[#000308] sm:top-[calc(4.75rem+env(safe-area-inset-top))] lg:hidden"
+        className="fixed inset-x-0 bottom-0 top-[calc(3.75rem+env(safe-area-inset-top))] z-50 overflow-y-auto overscroll-contain border-t border-white/10 bg-[#000308] sm:top-[calc(4.75rem+env(safe-area-inset-top))] lg:hidden"
         style={{ paddingBottom: "calc(6rem + env(safe-area-inset-bottom))" }}
       >
         <nav className="shell flex flex-col py-1" aria-label="Mobile">

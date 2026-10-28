@@ -103,10 +103,10 @@ export function Gallery() {
                       className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                     />
                   )}
-                  <span className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-gradient-to-t from-navy/80 to-transparent p-3 text-foam sm:p-4">
-                    <span className="mt-1 block font-serif text-lg sm:text-xl">{item.caption}</span>
+                  <span className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-navy/80 to-transparent p-2.5 text-foam sm:gap-3 sm:p-4">
+                    <span className="mt-1 block truncate font-serif text-base sm:text-xl">{item.caption}</span>
                     <i
-                      className={`bi ${item.video ? "bi-play-circle" : "bi-arrows-fullscreen"} text-lg`}
+                      className={`bi ${item.video ? "bi-play-circle" : "bi-arrows-fullscreen"} shrink-0 text-lg`}
                       aria-hidden="true"
                     />
                   </span>

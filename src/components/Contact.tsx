@@ -116,48 +116,51 @@ export function Contact() {
             </p>
           )}
 
-          <ul className="mt-8 space-y-3 text-white/80">
+          <ul className="mt-7 space-y-2.5 text-[0.92rem] text-white/80 sm:mt-8 sm:space-y-3 sm:text-base">
             {company.email ? (
               <li>
-                <a className="inline-flex items-center gap-3 hover:text-white" href={`mailto:${company.email}`}>
-                  <i className="bi bi-envelope" aria-hidden="true" />
+                <a
+                  className="inline-flex min-h-11 max-w-full items-center gap-3 break-all hover:text-white"
+                  href={`mailto:${company.email}`}
+                >
+                  <i className="bi bi-envelope shrink-0" aria-hidden="true" />
                   {company.email}
                 </a>
               </li>
             ) : null}
             <li>
               <a
-                className="inline-flex items-center gap-3 hover:text-white"
+                className="inline-flex min-h-11 items-center gap-3 hover:text-white"
                 href={company.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="bi bi-facebook" aria-hidden="true" />
+                <i className="bi bi-facebook shrink-0" aria-hidden="true" />
                 Facebook
               </a>
             </li>
-            <li className="inline-flex items-center gap-3">
-              <i className="bi bi-clock" aria-hidden="true" />
+            <li className="inline-flex min-h-11 items-center gap-3">
+              <i className="bi bi-clock shrink-0" aria-hidden="true" />
               {company.hours}
             </li>
-            <li className="inline-flex items-center gap-3">
-              <i className="bi bi-geo-alt" aria-hidden="true" />
+            <li className="inline-flex min-h-11 items-center gap-3">
+              <i className="bi bi-geo-alt shrink-0" aria-hidden="true" />
               {company.locality}, {company.region}
             </li>
           </ul>
         </div>
 
         <form
-          className="border border-white/10 bg-foam p-4 text-ink shadow-soft sm:p-6 md:p-8"
+          className="border border-white/10 bg-foam p-3.5 text-ink shadow-soft sm:p-6 md:p-8"
           onSubmit={onSubmit}
           noValidate
         >
-          <h3 className="font-serif text-[1.45rem] font-medium sm:text-3xl">Prepare your text</h3>
-          <p className="mt-2 text-sm leading-relaxed text-mute">
+          <h3 className="font-serif text-[1.35rem] font-medium sm:text-3xl">Prepare your text</h3>
+          <p className="mt-2 text-[0.8125rem] leading-relaxed text-mute sm:text-sm">
             This form does not send anything by itself. Continue in Messages opens your messaging app with the note filled in. You finish sending it there.
           </p>
 
-          <div className="mt-6 grid gap-5 sm:grid-cols-2">
+          <div className="mt-5 grid gap-4 sm:mt-6 sm:grid-cols-2 sm:gap-5">
             <div className="sm:col-span-2">
               <label htmlFor="contact-name" className="text-sm font-medium">
                 Name
@@ -273,19 +276,21 @@ export function Contact() {
             </div>
           </div>
 
-          <button type="submit" className="btn-solid mt-8 w-full" disabled={!hasPhone()}>
+          <button type="submit" className="btn-solid mt-6 w-full sm:mt-8" disabled={!hasPhone()}>
             <i className="bi bi-chat-left-text" aria-hidden="true" />
             Continue in Messages
           </button>
 
           {ready ? (
-            <div className="mt-6 border border-ink/10 bg-paper p-4" role="status">
+            <div className="mt-5 border border-ink/10 bg-paper p-3.5 sm:mt-6 sm:p-4" role="status">
               <p className="font-medium">Your message is ready</p>
               <p className="mt-1 text-sm text-mute">
                 Finish sending it in your messaging app. This page does not send the message for you.
               </p>
-              <pre className="mt-3 whitespace-pre-wrap font-sans text-sm leading-relaxed">{ready}</pre>
-              <button type="button" className="btn-ghost mt-4" onClick={copyMessage}>
+              <pre className="mt-3 whitespace-pre-wrap break-words font-sans text-[0.8125rem] leading-relaxed sm:text-sm">
+                {ready}
+              </pre>
+              <button type="button" className="btn-ghost mt-4 w-full sm:w-auto" onClick={copyMessage}>
                 <i className={`bi ${copied ? "bi-check2" : "bi-clipboard"}`} aria-hidden="true" />
                 {copied ? "Message copied" : "Copy Message"}
               </button>
